@@ -40,19 +40,19 @@ cp .env.example .env
 
 ※ .env は以下のように設定されています（開発環境）
 
-APP_ENV=local
+APP_ENV=local  
 APP_KEY=
 
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_DATABASE=laravel_db
-DB_USERNAME=laravel_user
+DB_CONNECTION=mysql  
+DB_HOST=mysql  
+DB_DATABASE=laravel_db  
+DB_USERNAME=laravel_user  
 DB_PASSWORD=laravel_pass
 
-MAIL_MAILER=smtp
-MAIL_HOST=mailhog
-MAIL_PORT=1025
-MAIL_FROM_ADDRESS=test@example.com
+MAIL_MAILER=smtp  
+MAIL_HOST=mailhog  
+MAIL_PORT=1025  
+MAIL_FROM_ADDRESS=test@example.com  
 MAIL_FROM_NAME="FleaMarketApp"
 
 ### 6. アプリケーションキーの生成
