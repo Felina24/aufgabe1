@@ -23,7 +23,7 @@
 ## 環境構築手順
 
 ### 1. リポジトリをクローン
-git clone <リポジトリURL>
+git clone git@github.com:Felina24/aufgabe1.git  
 cd coachtech laravel aufgabe1
 
 ### 2. Dockerコンテナを起動
@@ -97,7 +97,6 @@ http://localhost:8026
 ## 管理者ユーザーおよび一般ユーザーのログイン情報
   
 ※ 以下は動作確認用のダミーアカウントです。
-※ メール認証が必要な機能は、Mailhog 上の認証メールから認証完了後に利用可能です。
 
 ---
 
