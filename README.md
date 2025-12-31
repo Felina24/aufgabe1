@@ -23,8 +23,8 @@
 ## 環境構築手順
 
 ### 1. リポジトリをクローン
-git clone <リポジトリURL>
-cd coachtech laravel aufgabe1
+git clone git@github.com:Felina24/aufgabe1.git  
+cd coachtech/laravel/aufgabe1
 
 ### 2. Dockerコンテナを起動
 docker compose up -d --build
@@ -40,19 +40,19 @@ cp .env.example .env
 
 ※ .env は以下のように設定されています（開発環境）
 
-APP_ENV=local
+APP_ENV=local  
 APP_KEY=
 
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_DATABASE=laravel_db
-DB_USERNAME=laravel_user
+DB_CONNECTION=mysql  
+DB_HOST=mysql  
+DB_DATABASE=laravel_db  
+DB_USERNAME=laravel_user  
 DB_PASSWORD=laravel_pass
 
-MAIL_MAILER=smtp
-MAIL_HOST=mailhog
-MAIL_PORT=1025
-MAIL_FROM_ADDRESS=test@example.com
+MAIL_MAILER=smtp  
+MAIL_HOST=mailhog  
+MAIL_PORT=1025  
+MAIL_FROM_ADDRESS=test@example.com  
 MAIL_FROM_NAME="FleaMarketApp"
 
 ### 6. アプリケーションキーの生成
@@ -96,7 +96,7 @@ http://localhost:8026
 
 ## 管理者ユーザーおよび一般ユーザーのログイン情報
   
-※ 以下は動作確認用のダミーアカウントです。
+※ 以下は動作確認用のダミーアカウントです。  
 ※ メール認証が必要な機能は、Mailhog 上の認証メールから認証完了後に利用可能です。
 
 ---
@@ -112,3 +112,16 @@ http://localhost:8026
 
 - パスワード  
   11111111
+
+---
+
+## Seeder の構成と実行順
+
+外部キー制約を考慮し、以下の順序で Seeder を実行するよう修正しました。
+
+1. **UserSeeder**
+   - 商品データの紐付け先となるユーザーを作成
+2. **CategorySeeder**
+   - 商品カテゴリーの初期データを作成
+3. **ItemSeeder**
+   - 上記で作成したユーザーに紐づく商品データを作成
